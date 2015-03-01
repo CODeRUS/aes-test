@@ -10,8 +10,7 @@ public:
     explicit AesTest(QObject *parent = 0);
 
 private:
-    QByteArray getCiphertextV2(const QByteArray &key, unsigned int counter, const QByteArray &plaintext);
-    QByteArray getPlaintextV2(const QByteArray &key, unsigned int counter, const QByteArray &ciphertext);
+    QByteArray encryptWithCounter(const QByteArray &key, int counter, const QByteArray &plaintext);
     void intToByteArray(QByteArray &input, int offset, int value);
 };
 
